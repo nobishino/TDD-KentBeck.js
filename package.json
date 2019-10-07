@@ -4,7 +4,8 @@
   "description": "Reading Kent Beck's \"Test-Driven Development by Example\"",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --recursive "
+    "test": "mocha --recursive ",
+    "coverage": "nyc npm run test"
   },
   "repository": {
     "type": "git",
@@ -20,7 +21,8 @@
     "url": "https://github.com/nobishino/TDD-KentBeck.js/issues"
   },
   "homepage": "https://github.com/nobishino/TDD-KentBeck.js#readme",
-  "dependencies": {
+  "devDependencies": {
+    "nyc": "^14.1.1",
     "chai": "^4.2.0",
     "mocha": "^6.2.1"
   }
