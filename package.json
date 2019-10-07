@@ -1,0 +1,27 @@
+{
+  "name": "tdd-kentbeck",
+  "version": "1.0.0",
+  "description": "Reading Kent Beck's \"Test-Driven Development by Example\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --recursive "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nobishino/TDD-KentBeck.js.git"
+  },
+  "keywords": [
+    "JavaScript",
+    "TDD"
+  ],
+  "author": "shino",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nobishino/TDD-KentBeck.js/issues"
+  },
+  "homepage": "https://github.com/nobishino/TDD-KentBeck.js#readme",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.2.1"
+  }
+}
