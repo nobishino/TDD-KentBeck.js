@@ -13,5 +13,11 @@ describe("Chapter 2", () => {
             assert.equal(15, product.amount);
         });
 
+        it(`equals()`, () => {
+            assert.isTrue(new Dollar(5).equals(new Dollar(5)));
+            assert.isFalse(new Dollar(5).equals(new Dollar(6)));
+        });
+        
+
     });
 });
