@@ -30,5 +30,9 @@ Kent Beck「テスト駆動開発」のコードをJavaScriptで書く読書リ�
 * [ ] amountをprivateにする
 * [x] Dollar sideeffect
 * [ ] Moneyの丸め処理
-* [ ] equals()
+* [ ] *equals()*
 * [ ] hashCode
+
+1. 仮実装
+2. もう1つテストを書く
+3. 2つのテストを同時に通すようにリファクタリング
