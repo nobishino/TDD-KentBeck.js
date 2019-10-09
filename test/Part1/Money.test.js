@@ -3,7 +3,7 @@ describe("Chapter 2", () => {
     const should = chai.should;
     const assert = chai.assert;
     should();
-    const Dollar = require('../../src/chap02/Dollar');
+    const Dollar = require('../../src/Part1/Dollar');
     describe(`Class Dollar`, () => {
         it(`$5 * 2 = $10 副作用を排除する`, () => {
             const five = new Dollar(5);
