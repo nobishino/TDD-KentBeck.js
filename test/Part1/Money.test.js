@@ -12,11 +12,12 @@ describe("Chapter 2", () => {
             assert.isTrue(new Dollar(15).equals(five.times(3)));
         });
 
-        it(`equals()`, () => {
+        it(`test equality`, () => {
             assert.isTrue(new Dollar(5).equals(new Dollar(5)));
             assert.isFalse(new Dollar(5).equals(new Dollar(6)));
             assert.isTrue(new Flanc(5).equals(new Flanc(5)));
             assert.isFalse(new Flanc(5).equals(new Flanc(6)));
+            assert.isFalse(new Flanc(5).equals(new Dollar(5)));
         });
     });
 
