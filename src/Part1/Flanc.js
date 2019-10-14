@@ -1,15 +1,13 @@
-class Flanc {
+const Money = require('./Money');
+class Flanc extends Money {
     constructor(amount) {
-        this._amount = amount;
+        super(amount);
     }
 
     times(multiplier) {
         return new Flanc(this._amount * multiplier);
     }
 
-    equals(flanc) {
-        return this._amount === flanc._amount;
-    }
 }
 
 module.exports = Flanc;

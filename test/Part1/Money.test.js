@@ -15,6 +15,8 @@ describe("Chapter 2", () => {
         it(`equals()`, () => {
             assert.isTrue(new Dollar(5).equals(new Dollar(5)));
             assert.isFalse(new Dollar(5).equals(new Dollar(6)));
+            assert.isTrue(new Flanc(5).equals(new Flanc(5)));
+            assert.isFalse(new Flanc(5).equals(new Flanc(6)));
         });
     });
 
