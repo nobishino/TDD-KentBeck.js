@@ -14,8 +14,8 @@ describe("Chapter 2", () => {
 
             it(`$5 * 2 = $10 副作用を排除する`, () => {
                 const five = Money.dollar(5);
-                assert.isTrue(new Dollar(10).equals(five.times(2)));
-                assert.isTrue(new Dollar(15).equals(five.times(3)));
+                assert.isTrue(Money.dollar(10).equals(five.times(2)));
+                assert.isTrue(Money.dollar(15).equals(five.times(3)));
             });
 
         });
@@ -23,11 +23,11 @@ describe("Chapter 2", () => {
         describe(`testEquality`, () => {
 
             it(`test equality`, () => {
-                assert.isTrue(new Dollar(5).equals(new Dollar(5)));
-                assert.isFalse(new Dollar(5).equals(new Dollar(6)));
-                assert.isTrue(new Flanc(5).equals(new Flanc(5)));
-                assert.isFalse(new Flanc(5).equals(new Flanc(6)));
-                assert.isFalse(new Flanc(5).equals(new Dollar(5)));
+                assert.isTrue(Money.dollar(5).equals(Money.dollar(5)));
+                assert.isFalse(Money.dollar(5).equals(Money.dollar(6)));
+                assert.isTrue(Money.flanc(5).equals(Money.flanc(5)));
+                assert.isFalse(Money.flanc(5).equals(Money.flanc(6)));
+                assert.isFalse(Money.flanc(5).equals(Money.dollar(5)));
             });
         });
 
@@ -35,11 +35,15 @@ describe("Chapter 2", () => {
     });
 
     describe(`Class Flanc`, () => {
-        it(`$5 * 2 = $10 副作用を排除する`, () => {
-            const five = new Flanc(5);
-            assert.isTrue(new Flanc(10).equals(five.times(2)));
-            assert.isTrue(new Flanc(15).equals(five.times(3)));
+        describe(`testFlancMultiplication`, () => {
+
+            it(`$5 * 2 = $10 副作用を排除する`, () => {
+                const five = Money.flanc(5);
+                assert.isTrue(Money.flanc(10).equals(five.times(2)));
+                assert.isTrue(Money.flanc(15).equals(five.times(3)));
+            });
         });
+
     });
 
 });

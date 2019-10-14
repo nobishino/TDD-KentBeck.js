@@ -12,6 +12,10 @@ class Money {
         return new Dollar(amount);
     }
 
+    static flanc(amount) {
+        return new Flanc(amount);
+    }
+
 }
 
 class Dollar extends Money {
