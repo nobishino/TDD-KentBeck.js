@@ -8,5 +8,34 @@ class Money {
         return this._amount === money._amount;
     }
 
+    static dollar(amount) {
+        return new Dollar(amount);
+    }
+
 }
-module.exports = Money;
+
+class Dollar extends Money {
+    constructor(amount) {
+        super(amount);
+    }
+
+    times(multiplier) {
+        return new Dollar(this._amount * multiplier);
+    }
+}
+
+class Flanc extends Money {
+    constructor(amount) {
+        super(amount);
+    }
+
+    times(multiplier) {
+        return new Flanc(this._amount * multiplier);
+    }
+
+}
+module.exports = {
+    Dollar: Dollar,
+    Money: Money,
+    Flanc: Flanc,
+}

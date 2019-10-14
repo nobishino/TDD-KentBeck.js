@@ -3,22 +3,35 @@ describe("Chapter 2", () => {
     const should = chai.should;
     const assert = chai.assert;
     should();
-    const Dollar = require('../../src/Part1/Dollar');
-    const Flanc = require('../../src/Part1/Flanc');
+    const MoneyJs = require('../../src/Part1/Money');
+    const Money = MoneyJs.Money;
+    const Dollar = MoneyJs.Dollar;
+    const Flanc = MoneyJs.Flanc;
+    // const Dollar = require('../../src/Part1/Dollar');
+    // const Flanc = require('../../src/Part1/Flanc');
     describe(`Class Dollar`, () => {
-        it(`$5 * 2 = $10 副作用を排除する`, () => {
-            const five = new Dollar(5);
-            assert.isTrue(new Dollar(10).equals(five.times(2)));
-            assert.isTrue(new Dollar(15).equals(five.times(3)));
+        describe(`testMultiplication`, () => {
+
+            it(`$5 * 2 = $10 副作用を排除する`, () => {
+                const five = Money.dollar(5);
+                assert.isTrue(new Dollar(10).equals(five.times(2)));
+                assert.isTrue(new Dollar(15).equals(five.times(3)));
+            });
+
         });
 
-        it(`test equality`, () => {
-            assert.isTrue(new Dollar(5).equals(new Dollar(5)));
-            assert.isFalse(new Dollar(5).equals(new Dollar(6)));
-            assert.isTrue(new Flanc(5).equals(new Flanc(5)));
-            assert.isFalse(new Flanc(5).equals(new Flanc(6)));
-            assert.isFalse(new Flanc(5).equals(new Dollar(5)));
+        describe(`testEquality`, () => {
+
+            it(`test equality`, () => {
+                assert.isTrue(new Dollar(5).equals(new Dollar(5)));
+                assert.isFalse(new Dollar(5).equals(new Dollar(6)));
+                assert.isTrue(new Flanc(5).equals(new Flanc(5)));
+                assert.isFalse(new Flanc(5).equals(new Flanc(6)));
+                assert.isFalse(new Flanc(5).equals(new Dollar(5)));
+            });
         });
+
+
     });
 
     describe(`Class Flanc`, () => {
